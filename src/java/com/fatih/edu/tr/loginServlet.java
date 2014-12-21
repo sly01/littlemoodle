@@ -40,7 +40,7 @@ public class loginServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, ClassNotFoundException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
-               PrintWriter out = response.getWriter();
+        PrintWriter out = response.getWriter();
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String hostname = "jdbc:mysql://localhost:3306/Moodle";
@@ -58,22 +58,16 @@ public class loginServlet extends HttpServlet {
                 prstm.setString(2, password);
                 ResultSet rs = prstm.executeQuery();
                 if (rs.next()) {
-                   String type = rs.getString("user_type");
-                   if(type.equals("1")){
-                    out.println("Ogretmen Kullanici Girisi Basarili");
-                   }
-                   else
-                       out.println("Ogrenci kullanici giris basarili");
-                    
-                    //response.sendRedirect("http://www.turkishcoders.com");
+                    if (rs.getInt("user_type") == 1) {
+                        //out.println("Ogretmen Kullanici Girisi Basarili");
+                        getServletContext().getRequestDispatcher("/teacher.jsp").forward(request, response);
+                    } else {
+                        getServletContext().getRequestDispatcher("/student.jsp").forward(request, response);
+                    }
+                } else {
 
+                    out.println("Tekrar deneyiniz");
 
-                }
-     
-                 else {
-                    
-                        out.println("Tekrar deneyiniz");
-                    
                 }
             } else {
                 out.println("Lutfen parametreleri kontrol ediniz");
@@ -81,8 +75,7 @@ public class loginServlet extends HttpServlet {
         } finally {
             out.close();
         }
-        
-       
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

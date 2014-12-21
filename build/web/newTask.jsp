@@ -9,9 +9,16 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>New Task Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <form method="post" action="newTaskServlet" enctype="multipart/form-data">
+            <table>
+                <tr><td><b>Title:</b></td><td><input type="text" name="title"/></td></tr>
+                <tr><td><b>Description:</b></td><td><input type="text" name="description"/></td></tr>
+                <tr><td><b>Due-Date:</b></td><td><input type="datetime-local" name="due_date"/></td></tr>
+                <tr><tr></tr><td><input type="file"  name="file" value="Choose file"/></td></tr>
+            </table>
+        </form>
     </body>
 </html>
