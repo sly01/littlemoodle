@@ -4,6 +4,9 @@
     Author     : erkoc
 --%>
 
+
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.fatih.edu.tr.Task"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,6 +15,14 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <%
+          ArrayList<Task> list =(ArrayList<Task>)request.getAttribute("ListTaskServlet");
+          
+          for(Task task: list){
+              out.println(task.getTitle());
+              out.println(task.getDescription());
+          }
+        %>
+        
     </body>
 </html>

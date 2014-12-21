@@ -12,11 +12,12 @@ import java.sql.Date;
  * @author erkoc
  */
 public class Task {
+
     private int id;
     private String title;
     private String description;
-    private Date date;
-    private Date due_data;
+    private String date;
+    private String due_data;
     private String file_name;
     private String file_path;
     private int user_id;
@@ -24,7 +25,7 @@ public class Task {
     public Task() {
     }
 
-    public Task(int id, String title, String description, Date date, Date due_data, String file_name, String file_path, int user_id) {
+    public Task(int id, String title, String description, String date, String due_data, String file_name, String file_path, int user_id) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -35,6 +36,15 @@ public class Task {
         this.user_id = user_id;
     }
 
+    public Task(String title, String description, String due_data, String file_name, String file_path, int user_id) {
+        this.title = title;
+        this.description = description;
+        this.due_data = due_data;
+        this.file_name = file_name;
+        this.file_path = file_path;
+        this.user_id = user_id;
+    }
+   
     /**
      * @return the id
      */
@@ -80,28 +90,28 @@ public class Task {
     /**
      * @return the date
      */
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
     /**
      * @param date the date to set
      */
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
     /**
      * @return the due_data
      */
-    public Date getDue_data() {
+    public String getDue_data() {
         return due_data;
     }
 
     /**
      * @param due_data the due_data to set
      */
-    public void setDue_data(Date due_data) {
+    public void setDue_data(String due_data) {
         this.due_data = due_data;
     }
 
@@ -146,7 +156,5 @@ public class Task {
     public void setUser_id(int user_id) {
         this.user_id = user_id;
     }
-    
-    
-        
+
 }

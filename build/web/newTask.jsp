@@ -13,12 +13,12 @@
     </head>
     <body>
         <div id="divForm" name="form" style="border: 2px black solid;">
-        <form method="post" action="newTaskServlet" enctype="multipart/form-data">
+        <form method="post" action="NewTaskServlet" enctype="multipart/form-data">
             <table>
                 <tr><td><b>Title:</b></td><td><input type="text" name="title"/></td></tr>
                 <tr><td><b>Description:</b></td><td><input type="text" name="description"/></td></tr>
-                <tr><td><b>Due-Date:</b></td><td><input type="datetime-local" name="due_date"/></td></tr>
-                <tr><tr></tr><td><input type="file"  name="file" value="Choose file"/></td></tr>
+                <tr><td><b>Due-Date:</b></td><td><input type="text" name="due_date"/></td></tr>
+                <tr><tr></tr><td><input type="file"  name="dataFile" id="fileChooser" value="Choose file"/></td></tr>
             <tr><td></td><td><input type="submit" value="Create Task"/></td></tr>
             </table>
         </form>

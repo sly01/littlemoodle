@@ -1,6 +1,6 @@
 <%-- 
-    Document   : student
-    Created on : Dec 21, 2014, 4:09:48 AM
+    Document   : done
+    Created on : Dec 21, 2014, 5:58:38 PM
     Author     : erkoc
 --%>
 
@@ -12,9 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h2 align="center">Student Page </h2>
-       <table border="1">
-            <tr><td><a href="/Moodle/ListTaskServlet"><b>List Task</b></a></td></tr>
-        </table>
+        <h1>Basarili!</h1>
     </body>
 </html>

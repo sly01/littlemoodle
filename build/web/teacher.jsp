@@ -12,9 +12,10 @@
         <title>Teacher Page</title>
     </head>
     <body>
+        <h2 align="center">Teacher Page</h2>
         <table border="1">
             <tr><td><a href="newTask.jsp"><b>New Task</b></a></td></tr>
-            <tr><td><a href="listTask.jsp"><b>List Task</b></a></td></tr>
+            <tr><td><a href="/Moodle/ListTaskServlet"><b>List Task</b></a></td></tr>
         </table>
         </body>
 </html>

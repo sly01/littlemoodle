@@ -12,6 +12,9 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <a href="listTask.jsp">List Task</a>
+        <h2 align="center">Student Page </h2>
+       <table border="1">
+            <tr><td><a href="/Moodle/ListTaskServlet"><b>List Task</b></a></td></tr>
+        </table>
     </body>
 </html>

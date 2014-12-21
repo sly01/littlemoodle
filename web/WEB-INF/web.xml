@@ -8,6 +8,14 @@
         <servlet-name>TestServlet</servlet-name>
         <servlet-class>TestServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>NewTaskServlet</servlet-name>
+        <servlet-class>com.fatih.edu.tr.NewTaskServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListTaskServlet</servlet-name>
+        <servlet-class>com.fatih.edu.tr.ListTaskServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>loginServlet</servlet-name>
         <url-pattern>/loginServlet</url-pattern>
@@ -15,6 +23,14 @@
     <servlet-mapping>
         <servlet-name>TestServlet</servlet-name>
         <url-pattern>/TestServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NewTaskServlet</servlet-name>
+        <url-pattern>/NewTaskServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListTaskServlet</servlet-name>
+        <url-pattern>/ListTaskServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
